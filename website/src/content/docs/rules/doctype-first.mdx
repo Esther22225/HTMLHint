@@ -6,8 +6,7 @@ description: Ensures the doctype declaration appears before any non-comment cont
 
 import { Badge } from '@astrojs/starlight/components';
 
-Doctype must be declared before any non-comment content. Comments and whitespace are allowed before the DOCTYPE declaration.
-
+The DOCTYPE declaration must appear before any non-comment content in an HTML document. Comments and whitespace are permitted before the DOCTYPE.
 Level: <Badge text="Error" variant="danger" />
 
 ## Config value
@@ -15,7 +14,7 @@ Level: <Badge text="Error" variant="danger" />
 - `true`: enable rule
 - `false`: disable rule
 
-### The following patterns are **not** considered rule violations
+### Valid Examples
 
 ```html
 <!DOCTYPE html>
@@ -35,7 +34,7 @@ Level: <Badge text="Error" variant="danger" />
 ```
 
 ```html
-<div>Content before doctype</div>
+<!-- Comment before DOCTYPE -->
 <!DOCTYPE html>
 <html></html>
 ```
